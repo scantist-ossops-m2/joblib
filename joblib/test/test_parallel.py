@@ -362,6 +362,7 @@ def test_parallel_pickling():
             UnpicklableObject()) for _ in range(10))
 
 
+@with_numpy
 @with_multiprocessing
 @parametrize('byteorder', ['<', '>', '='])
 @parametrize('max_nbytes', [1, '1M'])
